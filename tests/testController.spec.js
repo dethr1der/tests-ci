@@ -43,7 +43,7 @@ describe('Check the controller', ()=>{
     })
 
     test('should return 400 bad request if levels are not provided', async ()=>{
-        const req = {query: { levels: '1', height: '1' }}
+        const req = {query: { bands: '2', height: '1' }}
         const res = mockResponse();
         await stairsController.calculate(req, res);
         expect(res.status).toHaveBeenCalledWith(400);
